@@ -1,6 +1,6 @@
 angular.module('myApp').directive('responsiveImage', function(){    
     // return appropriate source
-    var imgSrc = {
+    return {
       link: function postLink(scope, element, attr) {
         var size = 
           // insert desired measurments or pass in
@@ -12,5 +12,4 @@ angular.module('myApp').directive('responsiveImage', function(){
         element.attr("src", attr.originalSrc.replace('/files/','/files/styles/'+size+'/public/'));        
       }
     };
-  return imgSrc;
 });
